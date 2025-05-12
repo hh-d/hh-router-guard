@@ -1,0 +1,86 @@
+{
+  "id": "hh-router-guard",
+  "name": "UniApp 智能路由拦截插件 - hh-router-guard",
+  "displayName": "UniApp 智能路由拦截插件 - hh-router-guard",
+  "keywords": [
+    "uniapp",
+    "vue3",
+    "路由守卫",
+    "权限控制",
+    "登录拦截"
+  ],
+  "repository": "https://gitee.com/hh_self/hh-router-guard",
+  "dcloudext": {
+    "type": "js_sdk",
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      },
+      "sourcecode": {
+        "price": "0.00"
+      }
+    }
+  },
+  "version": "1.0.0",
+  "description": "hh-router-guard 是专为 UniApp 打造的路由守卫插件，基于 Vue 3 开发。支持智能登录拦截、灵活白名单配置，可自定义登录校验逻辑，具备强大错误处理能力，多端无缝兼容，轻量高效",
+  "dependencies": {},
+  "uni_modules": {
+    "description": "Uniapp路由守卫插件，提供页面访问权限控制、登录拦截和白名单功能",
+    "compatible": {
+      "app-plus": true,
+      "h5": true,
+      "mp-weixin": true,
+      "mp-alipay": true,
+      "mp-baidu": true,
+      "mp-toutiao": true,
+      "mp-qq": true
+    },
+    "platforms": {
+      "cloud": {
+        "tcb": "u",
+        "aliyun": "u"
+      },
+      "client": {
+        "App": {
+          "app-vue": "y",
+          "app-nvue": "n"
+        },
+        "H5-mobile": {
+          "Safari": "y",
+          "Android Browser": "y",
+          "微信浏览器(Android)": "y",
+          "QQ浏览器(Android)": "y"
+        },
+        "H5-pc": {
+          "Chrome": "y",
+          "IE": "y",
+          "Edge": "y",
+          "Firefox": "y",
+          "Safari": "y"
+        },
+        "小程序": {
+          "微信": "y",
+          "阿里": "y",
+          "百度": "y",
+          "抖音": "y",
+          "QQ": "y"
+        },
+        "快应用": {
+          "华为": "y",
+          "联盟": "y"
+        }
+      },
+      "extra": {
+        "mp-weixin": {
+          "usingComponents": {}
+        }
+      }
+    },
+    "author": "Eli_Huang",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://gitee.com/hh_self/hh-router-guard/issues"
+    },
+    "homepage": "https://ext.dcloud.net.cn/plugin?id=23410"
+  }
+}
