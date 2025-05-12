@@ -9,7 +9,7 @@
     "权限控制",
     "登录拦截"
   ],
-  "repository": "https://gitee.com/hh_self/hh-router-guard",
+  "repository": "https://github.com/hh-d/hh-router-guard",
   "dcloudext": {
     "type": "js_sdk",
     "sale": {
@@ -79,7 +79,7 @@
     "author": "Eli_Huang",
     "license": "MIT",
     "bugs": {
-      "url": "https://gitee.com/hh_self/hh-router-guard/issues"
+      "url": "https://github.com/hh-d/hh-router-guard/issues"
     },
     "homepage": "https://ext.dcloud.net.cn/plugin?id=23410"
   }

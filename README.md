@@ -172,8 +172,8 @@ checkLogin: () => {
 
 ## 九、贡献与反馈
 如果您在使用过程中遇到问题或有任何建议，欢迎：
-- 在 [插件市场评论区](https://ext.dcloud.net.cn/plugin?id=hh-hh-router-guard) 留言反馈
-- 提交 Issues 到 [Gitee 仓库](https://gitee.com/hh_self/hh-router-guard/issues)
+- 在 [插件市场评论区](https://ext.dcloud.net.cn/plugin?id=23410) 留言反馈
+- 提交 Issues 到 [Github 仓库](https://github.com/hh-d/hh-router-guard/issues)
 - 提交 Pull Requests 参与开发
 
 ## 十、许可证
