@@ -10,8 +10,8 @@
 - 自定义登录状态检查逻辑和错误处理机制
 
 ## 二、版本信息
-- 当前版本：`1.0.0`
-- 更新日期：2025-05-12
+- 当前版本：`1.1.2`
+- 更新日期：2025-10-22
 - 兼容性：支持所有 UniApp 支持的平台（微信小程序、H5、App、支付宝小程序等）
 
 ## 三、安装与引入
@@ -66,7 +66,7 @@ app.use(routerGuard, {
     return !!token
   },
   
-  // 登录页面路径
+  // 登录页面路径 === 需要替换为实际项目中登录页面的路径
   loginPath: '/pages/login/index',
   
   // 未登录时的处理逻辑
@@ -107,17 +107,24 @@ app.use(routerGuard, {
 ### 在组件中使用
 插件会在 Vue 实例上挂载 `$routerGuard` 对象，您可以在组件中访问：
 
+####  选项式 API 写法（Vue 3 兼容模式）
+Vue 3 的选项式 API 与 Vue 2 语法基本兼容，this.$routerGuard 仍然可以直接访问（因为插件通过 app.config.globalProperties 挂载了全局属性），只需保持组件结构一致即可：
 ```javascript
-// vue2写法
+// Vue 3 选项式 API 写法
 export default {
   methods: {
     checkPermission() {
+      // 与 Vue 2 写法一致，通过 this 访问
       const isAllowed = this.$routerGuard.check('/pages/protected')
       console.log('当前用户是否有权限:', isAllowed)
     }
   }
 }
-// vue3 setup写法
+```
+#### 组合式 API 写法（<script setup> 推荐）
+在 Vue 3 组合式 API 中，不推荐使用 this，而是通过插件提供的 useRouterGuard 钩子获取实例（源码中 src/useRouterGuard.ts 已定义该钩子）：
+```vue
+<!-- Vue 3 组合式 API 写法（<script setup>） -->
 <script setup>
 // 导入组合式 API 钩子
 import { useRouterGuard } from '@/uni_modules/hh-router-guard/src/useRouterGuard'
@@ -153,6 +160,13 @@ your-project/
 ```
 
 ## 七、更新日志
+
+### v1.1.1 (2025-10-22)
+- 修改README文档
+
+### v1.1.0 (2025-06-05)
+- 增加TypeScript支持
+
 ### v1.0.0 (2025-05-12)
 - 初始版本发布，支持基本的路由拦截、白名单和登录检查功能
 - 新增：支持自定义错误处理函数
