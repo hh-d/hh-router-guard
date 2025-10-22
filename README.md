@@ -108,6 +108,7 @@ app.use(routerGuard, {
 插件会在 Vue 实例上挂载 `$routerGuard` 对象，您可以在组件中访问：
 
 ```javascript
+// vue2写法
 export default {
   methods: {
     checkPermission() {
@@ -116,6 +117,20 @@ export default {
     }
   }
 }
+// vue3 setup写法
+<script setup>
+// 导入组合式 API 钩子
+import { useRouterGuard } from '@/uni_modules/hh-router-guard/src/useRouterGuard'
+
+// 获取路由守卫实例
+const routerGuard = useRouterGuard()
+
+// 定义方法
+const checkPermission = () => {
+  const isAllowed = routerGuard.check('/pages/protected')
+  console.log('当前用户是否有权限:', isAllowed)
+}
+</script>
 ```
 
 ## 六、示例项目
